@@ -1,4 +1,12 @@
 from odoo import models
+from odoo import fields
+
+change_log_ids = fields.One2many(
+    'product.change.log',
+    'product_id',
+    string='Historial'
+)
+
 
 TRACK_FIELDS = [
     'name',
